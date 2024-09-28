@@ -10,3 +10,15 @@ with open("person.json") as file:
     print(data)
     print(data["name"])
     print(data["languages"])
+    
+person_dict = {
+    "name": "Ali",
+    "languages": ["Python", "Javascript"]
+}
+
+result2 = json.dumps(person_dict)
+print(result2)
+
+
+with open("person.json", "w") as f:
+    json.dump(person_dict, f)
